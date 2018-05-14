@@ -54,7 +54,7 @@ mv lector/rarfile/LICENSE LICENSE.rarfile
 %{python3_sitelib}/%{name}*
 
 %changelog
-* Sun May 13 2018 Bugzy Little <bugzylittle@outlook.com> - 0.3.1-1
+* Sun May 13 2018 Bugzy Little <bugzylittle@outlook.com> - 0.4-1
 - upgrade to version 0.4
 - Text annotations
 - Drag and drop support
