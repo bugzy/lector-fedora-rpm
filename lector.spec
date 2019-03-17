@@ -1,5 +1,5 @@
 Name:       lector
-Version:    0.4
+Version:    0.5.1
 Release:    1%{?dist}
 Summary:    Qt based Ebook reader 
 License:    GPLv3 and MIT
@@ -20,16 +20,21 @@ Requires:       python3-beautifulsoup4
 Requires:       python3-qt5
 Requires:       python3-requests
 Requires:       python3-poppler-qt5
+Requires:       python3-PyMuPDF
+Requires:       python3-djvulibre
+Requires:       python3-markdown
 
 %description
 Qt based ebook reader
 Currently supports:
  - pdf
  - epub
+ - djvu
+ - fb2
  - mobi
  - azw / azw3 / azw4
  - cbr / cbz
-
+ - md
 
 
 %prep
@@ -54,6 +59,18 @@ mv lector/rarfile/LICENSE LICENSE.rarfile
 %{python3_sitelib}/%{name}*
 
 %changelog
+* Sun Mar 17 2019 Bugzy Little <bugzylittle@outlook.com> - 0.5.1-1
+- upgrade to version 0.5.1
+- fb2 support
+- Comicbooks / PDFs: Double page mode, Manga mode, Image color inversion
+- Search functionality
+- Way better sidedock
+- Seriously overhauled ToC generation for all filetypes. Now with more tree view
+- Error logging - Error notifications
+- Much better error handling
+- UI improvements
+- Bugfixes
+
 * Sun May 13 2018 Bugzy Little <bugzylittle@outlook.com> - 0.4-1
 - upgrade to version 0.4
 - Text annotations
